@@ -1,0 +1,48 @@
+<h1>Placas</h1>
+
+<%= form_with model: @board do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :board_type %>
+    <%= form.text_field :board_type %>
+  </div>
+
+  <div>
+    <%= form.label :serial_number %>
+    <%= form.text_field :serial_number %>
+  </div>
+
+  <div>
+    <%= form.label :service_order %>
+    <%= form.text_field :service_order %>
+  </div>
+
+  <div>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <br>
+<div>
+<%= form.submit %>
+</div>
+<% end %>
+  <h1>Boards</h1>
+  <ul>btype
+    <% @boards.each do |board|%>
+      <li>
+        board type: <%= board.quantity %>
+      
+      </li>
+    <% end %>
+  </ul>
+</form>
